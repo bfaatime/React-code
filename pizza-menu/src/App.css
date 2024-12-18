@@ -1,0 +1,144 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.menu {
+  width: 100%;
+  background-color: #ff5733;
+  padding: 20px 10px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+.search-bar {
+  margin-top: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+  padding: 20px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 250px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-media {
+  width: 100%;
+  height: 180px; 
+  object-fit: cover; 
+  border-bottom: 1px solid #eee;
+}
+
+
+.card-content {
+  padding: 12px;
+  text-align: left;
+}
+
+.card-content .ingredients {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #ff5733;
+  font-size: 0.85rem;
+}
+
+.card-header {
+  padding: 8px 12px;
+  background-color: #fafafa;
+}
+
+.card-header .MuiCardHeader-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-header .MuiCardHeader-subheader {
+  font-size: 0.8rem;
+  color: #757575;
+}
+
+.card-actions {
+  padding: 8px 12px;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-actions .MuiIconButton-root {
+  color: #757575;
+}
+
+.expand-more {
+  transition: transform 0.3s ease;
+}
+
+.expand-more.expanded {
+  transform: rotate(180deg);
+}
+
+
+@media screen and (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr; 
+  }
+
+  .menu h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+}
