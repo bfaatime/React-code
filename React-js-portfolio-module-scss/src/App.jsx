@@ -1,33 +1,22 @@
 import React from "react";
-import Header from "./components/header";
-import Skills from "./components/skills";
-import AboutMe from "./components/aboutme";
-import Certifications from "./components/Certifications";
-import SocialPlatforms from "./components/SocialPlatforms";
-import Hobby from "./components/Hobby";
-import ContactMe from "./components/ContactMe"; 
-import "./App.scss"; // Stil faylı
+import Header from "./components/Header/Header"; 
+import Skills from "./components/Skills/Skills";  
+import AboutMe from "./components/AboutMe/AboutMe";  
+import Certifications from "./components/Certifications/Certifications";  
+import SocialPlatforms from "./components/SocialPlatforms/SocialPlatforms";  
+import Hobby from "./components/Hobby/Hobby"; 
+import ContactMe from "./components/ContactMe/ContactMe";  
+import "./App.scss"; 
 
 function App() {
   return (
     <div className="App">
-      {/* Başlıq hissəsi */}
       <Header />
-
-      {/* Haqqımda Bölməsi */}
       <AboutMe />
-
-      {/* Bacarıqlar Bölməsi */}
       <Skills />
-      {<Certifications />}
-
-      {/* Sosial Media Platformaları */}
+      <Certifications />
       <SocialPlatforms />
-
-      {/* Hobby Bölməsi */}
       <Hobby />
-
-      {/* Əlaqə Bölməsi */}
       <ContactMe />
     </div>
   );

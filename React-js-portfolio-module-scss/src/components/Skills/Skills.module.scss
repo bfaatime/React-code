@@ -1,0 +1,35 @@
+/* Skills.module.scss */
+.skills {
+    padding: 50px 20px;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skills h3 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .skills ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  
+  .skills li {
+    font-size: 1.2rem;
+    color: #555;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .skills li:hover {
+    background-color: #6a1b9a;
+    color: white;
+    transform: scale(1.05);
+  }
+  

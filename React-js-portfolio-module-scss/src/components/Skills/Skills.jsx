@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "./Skills.module.scss"; // Doğru CSS modülünü import et
 
 function Skills() {
   return (
-    <section id="skills" className="skills">
-      <h3>Bacarıqlar</h3>
-      <ul>
+    <section id="skills" className={styles.skills}> {/* CSS modülünü className ile kullan */}
+      <h3 className={styles.skillsTitle}>Bacarıqlar</h3> {/* className ile CSS modülünü kullan */}
+      <ul className={styles.skillsList}> {/* className ile CSS modülünü kullan */}
         <li>HTML5 & CSS</li>
         <li>JavaScript & React</li>
         <li>Social Media Marketing</li>
@@ -14,7 +15,7 @@ function Skills() {
         <li>Google Search Console</li>
         <li>Google My Business</li>
         <li>SEO services</li>
-        <li>Aerbaijan</li>
+        <li>Azerbaijan</li>
         <li>Microsoft Powerpoint</li>
         <li>Microsoft Word</li>
         <li>Turkish</li>

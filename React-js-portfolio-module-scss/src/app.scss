@@ -1,323 +1,95 @@
-/* Ümumi tərz */
+/* App.scss */
+
+/* Global stil kuralları */
+
+/* Genel sıfırlama ve kutu modellemeyi ayarlıyoruz */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  body {
-    background-color: #f4f4f9;
-    color: #333;
-    overflow-x: hidden;
-    height: 100%;
-  }
-  
-  /* Şriftlər */
-  h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  h1 {
-    font-size: 3rem;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-  }
-  
-  h3 {
-    font-size: 2.2rem;
-  }
-  
-  /* Başlıq Hissəsi (Header) */
-  header {
-    background-color: #333; /* Qara fon */
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-    position: relative;
-    height: 80vh; /* Hündürlük */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .header-content h1 {
-    font-size: 4rem;
-    color: #fff;
-    animation: fadeIn 2s ease-out;
-  }
-  
-  .header-content p {
-    font-size: 1.5rem;
-    margin: 20px 0;
-    color: #ccc;
-  }
-  
-  .header-buttons button {
-    background-color: #fff;
-    color: #333;
-    border: none;
-    padding: 15px 30px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    margin: 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .header-buttons button:hover {
-    background-color: #555;
-    color: white;
-  }
-  
-  /* Başlıqda Icon animasiya */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .header-content i {
-    font-size: 3rem;
-    margin-top: 20px;
-    animation: bounceIn 1.5s infinite alternate;
-  }
-  
-  @keyframes bounceIn {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  /* Haqqımda Bölməsi */
-  .about-me {
-    display: flex;
-    justify-content: space-between;
-    padding: 80px 20px;
-    background-color: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    position: relative;
-    flex-wrap: wrap;
-  }
-  
-  .about-me-content {
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .profile-image {
-    width: 600px;
-    height: 390px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 40px;
-    margin-bottom: 20px;
-  }
-  
-  .about-me h2 {
-    font-size: 2.8rem;
-    color: #333; /* Qara rəngdə başlıq */
-    margin-bottom: 20px;
-  }
-  
-  .about-me p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    width: 60%;
-    color: #555;
-  }
-  
-  /* GIF animasiyası */
-  .about-me .gif {
-    position: absolute;
-    top: 40%;
-    right: 0;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    animation: rotate 10s infinite linear;
-  }
-  
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  /* Sosial Media Bölməsi */
-  .social-platforms {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 50px;
-  }
-  
-  .social-platforms a {
-    color: #333;
-    font-size: 3rem;
-    transition: color 0.3s ease;
-  }
-  
-  .social-platforms a:hover {
-    color: #6a1b9a; /* Hover zamanı dəyişən rəng */
-  }
-  
-  /* Hobby Bölməsi */
-  .hobby {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #f9f9f9; /* Yüngül boz fon */
-    margin-top: 50px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-  
-  .hobby h3 {
-    font-size: 2.5rem;
-    color: #1e90ff; /* Mavi rəng */
-    margin-bottom: 20px;
-  }
-  
-  .hobby p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #555;
-  }
-  
-  .hobby .photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Fotoğrafları sətirlər üzrə düzürük */
-    gap: 20px;
-    justify-items: center;
-    margin-top: 30px;
-  }
-  
-  .hobby .photo-gallery .profile-images {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .hobby .photo-gallery .profile-images:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    filter: brightness(1.2);
-  }
-  
-  /* Bacarıqlar Bölməsi */
-  .skills {
-    padding: 50px 20px;
-    background-color: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-  
-  .skills h3 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .skills ul {
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-  }
-  
-  .skills li {
-    font-size: 1.2rem;
-    color: #555;
-    background-color: #f1f1f1;
-    padding: 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .skills li:hover {
-    background-color: #6a1b9a;
-    color: white;
-    transform: scale(1.05);
-  }
-  
-  @media (max-width: 768px) {
-    .hobby .photo-gallery {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-  
-    .skills ul {
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-  }
-  
-/* Sertifikalar kısmı için stil */
-.certifications {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  min-height: 100vh; /* Sayfa tamamlandığında ekranın tamamını kaplasın */
-  background-color: #f4f4f4; /* Arka plan rengi */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Sertifikaların başlığı */
-.certifications h2 {
-  font-size: 2.5rem; /* Başlık boyutunu büyütüyoruz */
-  margin-bottom: 20px;
+/* Sayfa genelinde kullanılan yazı tipi ve font ayarları */
+body {
+  font-family: 'Arial', sans-serif; /* Genel yazı tipi */
+  background-color: #f4f4f9; /* Sayfa arka plan rengi */
+  color: #333; /* Yazı rengi */
+  overflow-x: hidden; /* Yatay kaydırma çubuğunu gizle */
+  height: 100%; /* Sayfanın tam yüksekliği */
+}
+
+/* Header dışında kalan her bölüm için ortak padding */
+section {
+  padding: 50px 20px;
+}
+
+/* Ekran boyunca yayılacak şekilde her bölümün (section) kutu düzenini yapalım */
+section + section {
+  margin-top: 40px;
+}
+
+/* Sayfa için genel container */
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Başlıklar için ortak stil */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif; /* Başlık fontu */
   color: #333; /* Başlık rengi */
 }
 
-/* Sertifikalar listesinin stilleri */
-.certifications ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
+/* Sayfa genelinde başlıkların altına boşluk bırakmak için */
+h1 {
+  font-size: 3rem;
 }
 
-.certifications li {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #555;
+h2 {
+  font-size: 2.5rem;
 }
 
-/* Resimlerin stilini burada tanımlıyoruz */
-.certification-images {
+h3 {
+  font-size: 2.2rem;
+}
+
+/* Linkler için ortak stil */
+a {
+  color: inherit; /* Linkler metin rengini alır */
+  text-decoration: none; /* Alt çizgiyi kaldırır */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #6a1b9a; /* Link üzerine gelince renk değişir */
+}
+
+/* Sayfa genelinde kullanılacak temel renk paletleri */
+$primary-color: #6a1b9a;
+$secondary-color: #f4f4f9;
+$highlight-color: #1e90ff;
+
+:root {
+  --primary-color: #6a1b9a;
+  --secondary-color: #f4f4f9;
+  --highlight-color: #1e90ff;
+}
+
+/* Flexbox düzenleme örneği */
+.flex-center {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
-  margin-top: 20px;
+  align-items: center;
 }
 
-.certification-images img {
-  width: 300px;  /* Resimlerin genişliğini artırdık */
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
-  transition: transform 0.3s ease-in-out; /* Resim üzerine geldiğinde efekt */
+.flex-between {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* Hover efekti: Resim üzerine gelince biraz büyümesini sağlıyoruz */
-.certification-images img:hover {
-  transform: scale(1.05);
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

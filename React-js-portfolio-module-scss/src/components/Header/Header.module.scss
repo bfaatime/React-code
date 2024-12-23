@@ -1,0 +1,73 @@
+/* Header Bölmesi Stili */
+
+.header {
+    background-color: #333; /* Qara fon */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    height: 80vh; /* Hündürlük */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .header-content h1 {
+    font-size: 4rem;
+    color: #fff;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .header-content p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #ccc;
+  }
+  
+  .header-buttons button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .header-buttons button:hover {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* Başlıqda Icon animasiya */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .header-content i {
+    font-size: 3rem;
+    margin-top: 20px;
+    animation: bounceIn 1.5s infinite alternate;
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
