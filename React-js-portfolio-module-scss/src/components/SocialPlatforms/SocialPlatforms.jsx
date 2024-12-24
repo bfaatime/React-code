@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./SocialPlatforms.module.scss";
 import { FaInstagram, FaGithub } from "react-icons/fa"; 
-import profilePicture1 from "../../images/fatiam.jpg";  // İlk resim
-import profilePicture2 from "../../images/images.png"; // İkinci resim
+import profilePicture1 from "../../images/fatiam.jpg";  
+import profilePicture2 from "../../images/images.png"; 
 
 function SocialPlatforms() {
   return (
@@ -20,7 +20,7 @@ function SocialPlatforms() {
         <h3>Biznes</h3>
         <a href="https://www.instagram.com/fatiacosmeticshop" target="_blank" rel="noopener noreferrer">
           <img
-            src={profilePicture2}  // profilePicture2 kullanıyoruz
+            src={profilePicture2}  
             alt="Fatimə Bəxşəliyeva"
             className="profile-images"
           />

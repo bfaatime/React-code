@@ -1,17 +1,17 @@
 import React from "react";
-import styles from "./AboutMe.module.scss"; // CSS modülünü import et
-import profilePicture1 from "../../images/fatiam.jpg"; // Resmi import et
+import styles from "./AboutMe.module.scss"; 
+import profilePicture1 from "../../images/fatiam.jpg"; 
 
 function AboutMe() {
   return (
-    <section id="about-me" className={styles.aboutMe}> {/* className ile CSS modülünü kullan */}
-      <div className={styles.aboutMeContent}> {/* CSS modülünü kullan */}
+    <section id="about-me" className={styles.aboutMe}> {}
+      <div className={styles.aboutMeContent}> {}
         <img
           src={profilePicture1}
           alt="Fatimə Bəxşəliyeva"
-          className={styles.profileImage} // CSS modülünü kullan
+          className={styles.profileImage} 
         />
-        <div className={styles.aboutMeText}> {/* CSS modülünü kullan */}
+        <div className={styles.aboutMeText}> {}
           <h2>Haqqımda</h2>
           <p>
             Mən Bəxşəliyeva Fatimə. Azərbaycan Memarlıq və İnşaat Universitetində

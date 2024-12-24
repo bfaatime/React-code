@@ -1,47 +1,41 @@
-/* App.scss */
-
-/* Global stil kuralları */
-
-/* Genel sıfırlama ve kutu modellemeyi ayarlıyoruz */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Sayfa genelinde kullanılan yazı tipi ve font ayarları */
+
 body {
-  font-family: 'Arial', sans-serif; /* Genel yazı tipi */
-  background-color: #f4f4f9; /* Sayfa arka plan rengi */
-  color: #333; /* Yazı rengi */
-  overflow-x: hidden; /* Yatay kaydırma çubuğunu gizle */
-  height: 100%; /* Sayfanın tam yüksekliği */
+  font-family: 'Arial', sans-serif; 
+  background-color: #f4f4f9; 
+  color: #333; 
+  overflow-x: hidden;
+  height: 100%; 
 }
 
-/* Header dışında kalan her bölüm için ortak padding */
+
 section {
   padding: 50px 20px;
 }
 
-/* Ekran boyunca yayılacak şekilde her bölümün (section) kutu düzenini yapalım */
+
 section + section {
   margin-top: 40px;
 }
 
-/* Sayfa için genel container */
 .container {
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Başlıklar için ortak stil */
+
 h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif; /* Başlık fontu */
-  color: #333; /* Başlık rengi */
+  font-family: 'Montserrat', sans-serif; 
+  color: #333; 
 }
 
-/* Sayfa genelinde başlıkların altına boşluk bırakmak için */
+
 h1 {
   font-size: 3rem;
 }
@@ -54,18 +48,18 @@ h3 {
   font-size: 2.2rem;
 }
 
-/* Linkler için ortak stil */
+
 a {
-  color: inherit; /* Linkler metin rengini alır */
-  text-decoration: none; /* Alt çizgiyi kaldırır */
+  color: inherit; 
+  text-decoration: none; 
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #6a1b9a; /* Link üzerine gelince renk değişir */
+  color: #6a1b9a; 
 }
 
-/* Sayfa genelinde kullanılacak temel renk paletleri */
+
 $primary-color: #6a1b9a;
 $secondary-color: #f4f4f9;
 $highlight-color: #1e90ff;
@@ -76,7 +70,7 @@ $highlight-color: #1e90ff;
   --highlight-color: #1e90ff;
 }
 
-/* Flexbox düzenleme örneği */
+
 .flex-center {
   display: flex;
   justify-content: center;

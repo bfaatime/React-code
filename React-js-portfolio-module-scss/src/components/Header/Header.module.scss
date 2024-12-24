@@ -1,12 +1,12 @@
-/* Header Bölmesi Stili */
+
 
 .header {
-    background-color: #333; /* Qara fon */
+    background-color: #333; 
     color: white;
     text-align: center;
     padding: 80px 20px;
     position: relative;
-    height: 80vh; /* Hündürlük */
+    height: 80vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,8 +40,7 @@
     background-color: #555;
     color: white;
   }
-  
-  /* Başlıqda Icon animasiya */
+
   @keyframes fadeIn {
     from {
       opacity: 0;

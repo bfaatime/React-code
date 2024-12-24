@@ -29,18 +29,18 @@ function Hobby() {
   ];
 
   return (
-    <section id="hobby" className={styles.hobby}> {/* styles.hobby kullanımı */}
-      <h3 className={styles.hobbyTitle}>Hobbilər</h3> {/* styles.hobbyTitle kullanımı */}
-      <p className={styles.hobbyDescription}>Fotoqrafiya mənim əsas hobbilərimdən biridir.</p> {/* styles.hobbyDescription kullanımı */}
-      <FaCamera size={50} color="#6a1b9a" className={styles.hobbyIcon} /> {/* FaCamera ikonunu doğru kullanma */}
+    <section id="hobby" className={styles.hobby}> {}
+      <h3 className={styles.hobbyTitle}>Hobbilər</h3> {}
+      <p className={styles.hobbyDescription}>Fotoqrafiya mənim əsas hobbilərimdən biridir.</p> {}
+      <FaCamera size={50} color="#6a1b9a" className={styles.hobbyIcon} /> {}
       
-      <div className={styles.photoGallery}> {/* styles.photoGallery kullanımı */}
+      <div className={styles.photoGallery}> {}
         {images.map((img, index) => (
           <img
             key={index}
             src={img}
             alt={`Hobby Image ${index + 1}`}
-            className={styles.profileImages} // styles.profileImages kullanımı
+            className={styles.profileImages} 
           />
         ))}
       </div>
