@@ -1,18 +1,24 @@
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { products } from '../../../Services/db/index.json'; 
 
 const ProductDetails = () => {
-  const { id } = useParams();
-  const nav = useNavigate();
+  const { id } = useParams(); 
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    const selectedProduct = products.find(item => item.id === parseInt(id));
+    setProduct(selectedProduct);
+  }, [id]);
+
+  if (!product) return <p>Loading...</p>;
+
   return (
-    <div>
-      <h1>Product Details</h1>
-      <button
-        onClick={() => {
-          nav("/");
-        }}
-      >
-        Go Back
-      </button>
+    <div className="product-details">
+      <img src={product.image} alt={product.title} />
+      <h2>{product.title}</h2>
+      <p>{product.description}</p>
+      <p>Price: ${product.price}</p>
     </div>
   );
 };
