@@ -1,26 +1,29 @@
-// src/pages/Products.js
-import React, { useState } from 'react';
-import ProductCard from '../../../Components/Client/ClientLayout/ProductCard';
-import SearchBar from '../components/SearchBar';
-import { products } from '../../../Services/db/index.json'; 
+import React, { useState } from "react";
+import ProductCard from "../../../Components/Client/ClientLayout/ProductCard";
+import SearchBar from "../components/SearchBar"; 
+import { products } from "../../../Services/db/index.json";
+
 
 const Products = () => {
-  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [searchQuery, setSearchQuery] = useState(""); 
+  
 
-  const handleSearch = (query) => {
-    const filtered = products.filter(product =>
-      product.title.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredProducts(filtered);
-  };
+  const filteredProducts = products.filter(product =>
+    product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
-    <div>
-      <SearchBar onSearch={handleSearch} />
+    <div className="products-page">
+      <SearchBar query={searchQuery} setQuery={setSearchQuery} />
+      
       <div className="product-list">
-        {filteredProducts.map(product => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))
+        ) : (
+          <p>Product not found.</p>
+        )}
       </div>
     </div>
   );

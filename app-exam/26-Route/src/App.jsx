@@ -8,8 +8,8 @@ import AdminProducts from "./pages/Admin/Products";
 import Users from "./pages/Admin/Users";
 import ProductDetails from "./pages/Client/ProductDetails";
 import NotFound from "./Components/NotFound";
-import ClientLayout from "./components/Client/ClientLayout";
-import AdminLayout from "./components/Admin/AdminLayout";
+import ClientLayout from "./Components/Client/ClientLayout";
+import AdminLayout from "./Components/Admin/AdminLayout";
 
 function App() {
   return (
