@@ -1,40 +1,30 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import Home from "./Pages/Client/Home";
-import Dashboaard from "./pages/Admin/Dashboard";
-import Contact from "./pages/Client/Contact";
-import Products from "./pages/Client/Products";
-import AdminProducts from "./pages/Admin/Products";
-import Users from "./pages/Admin/Users";
-import ProductDetails from "./pages/Client/ProductDetails";
-import NotFound from "./Components/NotFound";
-import ClientLayout from "./Components/Client/ClientLayout";
-import AdminLayout from "./Components/Admin/AdminLayout";
+import { Route, Routes} from 'react-router-dom'
+import './App.css'
+import ProductDetails from './pages/ProductDetails'
+import Products from './pages/Products'
+import About from './pages/About'
+import Home from './pages/Home'
+import Favorites from './pages/Favorites'
+import NotFound from './pages/NotFound'
+import MainLayout from './layouts/MainLayout'
 
 function App() {
+
   return (
     <>
       <Routes>
-
-        <Route path="/" element={<ClientLayout />}>
-          <Route index element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          
-          <Route path="/products">
-            <Route index element={<Products />} />
-            <Route path=":id" element={<ProductDetails />} />
-          </Route>
-        </Route>
-
-        <Route path="/admin" element={<AdminLayout />}>
-          <Route index element={<Dashboaard />} />
-          <Route path="products" element={<AdminProducts />} />
-          <Route path="users" element={<Users />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
+       
+    <Route path="/" element={<MainLayout/>}> 
+    <Route index element={<Home/>}/>
+    <Route path="about" element={<About/>}/>
+    <Route path="products" element={<Products/>}/>
+    <Route path="productdetails" element={<ProductDetails/>}/>
+    <Route path="favorites" element={<Favorites/>}/>
+    <Route path="*" element={<NotFound/>}/>
+    </Route>
       </Routes>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
