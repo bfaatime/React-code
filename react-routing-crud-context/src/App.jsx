@@ -11,6 +11,7 @@ import Dashboard from './pages/Admin/Dashboard'
 import AddProduct from './pages/Admin/AddProduct'
 import AdminProducts from './pages/Admin/AdminProducts'
 import Favorites from './pages/Client/Favorites'
+import NotFound from './components/NotFound'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,11 +25,13 @@ function App() {
           <Route path="/productdetails/:id" element={<ProductDetails/>}/>
           <Route path="/contact" element={<Contact />}/>
           <Route path="/favorites" element={<Favorites/>}/>
+          <Route path="*" element={<NotFound/>}/>
         </Route>
         <Route  element={<AdminLayout/>}>
         <Route path="/admin" index element={<Dashboard/>}/>
         <Route path="/addproduct" element={<AddProduct/>}/>
         <Route path="/adminproducts" element={<AdminProducts/>}/>
+      
         </Route>
       </Routes>
     </>
