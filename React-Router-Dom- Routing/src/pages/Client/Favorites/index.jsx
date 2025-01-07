@@ -1,11 +1,29 @@
-import React from 'react'
+import React from "react";
+import { Row, Col } from "antd";
+import ProductCard from "../../../components/Client/ProductCard";
+import styles from "./index.module.scss";
 
-const Favorites = () => {
+const Favorites = ({ favorites, removeFromFavorites }) => {
   return (
-    <div>
-      <p>favorites</p>
+    <div className={styles.favorites}>
+      <h2>Your Favorites</h2>
+      {favorites.length === 0 ? (
+        <p>No favorite products yet.</p>
+      ) : (
+        <Row gutter={[16, 16]}>
+          {favorites.map((product) => (
+            <Col key={product.id} xs={24} sm={12} md={8} lg={6}>
+              <ProductCard
+                product={product}
+                removeFromFavorites={removeFromFavorites}
+                isFavorited={true} 
+              />
+            </Col>
+          ))}
+        </Row>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Favorites
+export default Favorites;

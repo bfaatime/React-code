@@ -1,20 +1,36 @@
-import React from 'react';
-import { Card } from 'antd';
-import styles from './index.module.scss'; 
+import React from "react";
+import { Card, Button } from "antd";
+import { HeartOutlined, HeartFilled } from "@ant-design/icons"; 
+import styles from "./index.module.scss";
 
-const { Meta } = Card;
+const ProductCard = ({ product, addToFavorites, removeFromFavorites, isFavorited }) => {
+  const handleFavoriteToggle = () => {
+    if (isFavorited) {
+      removeFromFavorites(product.id); 
+    } else {
+      addToFavorites(product); 
+    }
+  };
 
-const ProductCard = ({ product, isLong }) => {
   return (
-    <Card
-      hoverable
-      className={isLong ? styles.longCard : styles.shortCard}  
-      style={{ width: 240 }}
-      cover={<img alt={product.title} src={product.image} />}
-    >
-      <Meta title={product.title} description={product.description} />
-      <p className={styles.price}>Price: ${product.price}</p>
-    </Card>
+    <div className={styles.productCard}>
+      <Card hoverable cover={<img alt={product.title} src={product.image} />}>
+        <Card.Meta title={product.title} description={product.description} />
+        <div className={styles.price}>${product.price}</div>
+
+        <Button
+          type="text"
+          icon={
+            isFavorited ? (
+              <HeartFilled style={{ color: "red", fontSize: "20px" }} /> 
+            ) : (
+              <HeartOutlined style={{ fontSize: "20px" }} /> 
+            )
+          }
+          onClick={handleFavoriteToggle} 
+        />
+      </Card>
+    </div>
   );
 };
 

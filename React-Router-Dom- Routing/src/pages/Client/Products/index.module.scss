@@ -1,16 +1,66 @@
 .products {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.loading {
-  font-size: 24px;
-  margin-top: 20px;
+  padding: 20px;
 }
 
 .error {
   color: red;
-  font-size: 18px;
-  margin-top: 20px;
+  text-align: center;
 }
+
+.noProducts {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.5em;
+  color: #888;
+}
+
+.loadingWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.card {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.price {
+  font-weight: bold;
+.products {
+  padding: 20px;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.noProducts {
+  text-align: center;
+  font-size: 18px;
+  color: #ff4d4f;
+}
+
+  margin-top: 10px;
+}
+
+.products {
+  padding: 20px;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.noProducts {
+  text-align: center;
+  font-size: 18px;
+  color: #ff4d4f;
+}
+

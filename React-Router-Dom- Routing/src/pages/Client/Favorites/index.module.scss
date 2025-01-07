@@ -1,5 +1,15 @@
 .favorites {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  padding: 20px;
+}
+
+.loading,
+.error,
+.noProducts {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.price {
+  font-weight: bold;
+  margin-top: 10px;
+}
