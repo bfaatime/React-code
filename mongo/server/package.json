@@ -1,5 +1,5 @@
 {
-  "name": "react-code",
+  "name": "mongo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,11 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "cors": "^2.8.5",
     "express": "^4.21.2",
     "mongodb": "^6.12.0",
     "mongoose": "^8.9.3",
-    "nanoid": "^5.0.9",
     "nodemon": "^3.1.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
